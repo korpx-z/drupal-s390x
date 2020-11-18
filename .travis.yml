@@ -9,7 +9,7 @@ env:
     - REPO="quay.io/ibmz/drupal"
     - TAG="$REPO:9.0"
 before_script:
-  - docker login quay.io -u $ROBOT -p $ROBOT_TOKEN
+  - docker login quay.io -u $ROBOT_USER -p $ROBOTTOKEN
   - cd $TEST_DIR && chmod +x $TEST_SCRIPT
 script:
   - cd $BUILD_DIR && docker build . --tag $TAG
