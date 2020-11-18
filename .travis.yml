@@ -1,0 +1,18 @@
+arch: s390x
+services:
+  - docker
+env:
+  global:
+    - TEST_DIR="$PWD/9.0/fpm-alpine3.12/"
+    - TEST_SCRIPT="test.sh"
+    - BUILD_DIR="$PWD/9.0/fpm-alpine3.12/"
+    - REPO="quay.io/ibmz/drupal"
+    - TAG="$REPO:9.0"
+before_script:
+  - docker login quay.io -u $ROBOT -p $ROBOT_TOKEN
+  - cd $TEST_DIR && chmod +x $TEST_SCRIPT
+script:
+  - cd $BUILD_DIR && docker build . --tag $TAG
+  - cd $TEST_DIR && bash $TEST_SCRIPT
+after_script:
+  - docker push $TAG
