@@ -33,10 +33,7 @@ Per the [official repo...](https://github.com/docker-library/drupal/)
 $ docker volume create drupal-sites
 $ docker run --rm -v drupal-sites:/temporary/sites drupal cp -aRT /var/www/html/sites /temporary/sites
 $ docker run --name some-drupal --network some-network -d \
-	-v drupal-modules:/var/www/html/modules \
-	-v drupal-profiles:/var/www/html/profiles \
 	-v drupal-sites:/var/www/html/sites \
-	-v drupal-themes:/var/www/html/themes \
 	drupal
 ```
 
