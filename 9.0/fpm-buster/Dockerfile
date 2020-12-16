@@ -1,5 +1,5 @@
 # from https://www.drupal.org/docs/8/system-requirements/drupal-8-php-requirements
-FROM quay.io/ibmz/php:7.4-fpm-buster
+FROM quay.io/ibm/php:7.4-fpm-buster
 
 # install the PHP extensions we need
 RUN set -eux; \
