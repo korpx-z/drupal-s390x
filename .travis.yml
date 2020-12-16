@@ -6,7 +6,7 @@ env:
     - TEST_DIR="$PWD/9.0/fpm-alpine3.12/"
     - TEST_SCRIPT="test.sh"
     - BUILD_DIR="$PWD/9.0/fpm-alpine3.12/"
-    - REPO="quay.io/ibmz/drupal"
+    - REPO="quay.io/ibm/drupal"
     - TAG="$REPO:9.0"
 before_script:
   - docker login quay.io -u $ROBOT_USER -p $ROBOTTOKEN
