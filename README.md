@@ -3,7 +3,7 @@
 -    [original source code](https://github.com/docker-library/drupal)
 
 ### Versions
-9.0 *via alpine* (fpm-buster is available in this repo for building as well, but not delivered to our quay instance.)
+9.0 *via alpine* (fpm-buster is available in this repo for building as well, but not delivered via our quay registry.)
 
 # Drupal
 
